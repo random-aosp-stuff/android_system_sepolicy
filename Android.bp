@@ -701,6 +701,7 @@ precompiled_se_policy_binary {
     permissive_domains_on_user_builds: [
         "backuptool",
         "su",
+        "perspectived",
     ],
 }
 
@@ -740,6 +741,7 @@ se_policy_binary {
         "backuptool",
         "recovery",
         "su",
+        "perspectived",
     ],
 }
 
@@ -794,7 +796,10 @@ se_policy_binary {
     dist: {
         targets: ["base-sepolicy-files-for-mapping"],
     },
-    permissive_domains_on_user_builds: ["su"],
+    permissive_domains_on_user_builds: [
+        "su",
+        "perspectived",
+    ],
 }
 
 se_policy_conf {
